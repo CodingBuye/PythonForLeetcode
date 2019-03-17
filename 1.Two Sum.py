@@ -6,7 +6,6 @@ class Solution:
             if x in dicts:
                 return [dicts.get(x), i]
             dicts[target-x] = i
-        print(dicts)
 
     # def twoSum(self, nums, target):
     #     for (index, x) in enumerate(nums):
