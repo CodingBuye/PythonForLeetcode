@@ -12,11 +12,28 @@ class Solution:
         return possible_length
 
 
+class Solution1:
+    def minDeletionSize(self, A):
+        return sum(list(col) != sorted(col) for col in zip(*A))
+
+
+class Solution2:
+    def minDeletionSize(self, A):
+        return sum(any(a > b for a, b in zip(col, col[1:])) for col in zip(*A))
+
+
 size1 = ["cba", "daf", "ghi"]
-print(Solution().minDeletionSize(size1))
+# print(Solution().minDeletionSize(size1))
+#
+# size2 = ["a", "b"]
+# print(Solution().minDeletionSize(size2))
+#
+# size3 = ["zyx", "wvu", "tsr"]
+# print(Solution().minDeletionSize(size3))
 
-size2 = ["a", "b"]
-print(Solution().minDeletionSize(size2))
+for column in zip(*size1):
+    print(column)
 
-size3 = ["zyx", "wvu", "tsr"]
-print(Solution().minDeletionSize(size3))
+# ('c', 'd', 'g')
+# ('b', 'a', 'h')
+# ('a', 'f', 'i')
