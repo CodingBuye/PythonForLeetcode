@@ -15,3 +15,4 @@ class Solution:
             else:
                 res.append(root.val)
         return res
+
