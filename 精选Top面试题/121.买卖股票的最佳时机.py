@@ -1,12 +1,12 @@
-import sys
-
 class Solution:
     def max_profit(self, prices):
         """
         :param prices: 数组，它的第 i 个元素是一支给定股票第 i 天的价格
         :return: 你所能获取的最大利润。
         """
-        min_item = sys.maxsize
+        if not prices:
+            return 0
+        min_item = prices[0]
         res = 0
         for price in prices:
             if price <= min_item:
