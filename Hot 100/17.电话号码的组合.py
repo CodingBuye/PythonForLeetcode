@@ -1,6 +1,7 @@
 class Solution(object):
     def letter_combinations(self, digits):
         """
+        回溯法
         :param digits: 输入的数字组合
         :return: 可能的字母组合
         """
